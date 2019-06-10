@@ -4,10 +4,6 @@ steps:
 - name: build-master-push
   detach: true
   image: verdaccio/verdaccio:4
-  # volumes:
-  # - name: 
-  #   - "./storage:/verdaccio/storage"
-  #   - "./conf:/verdaccio/conf"
   when:
     event:
     - push
