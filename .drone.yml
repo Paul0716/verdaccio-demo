@@ -2,11 +2,17 @@ kind: pipeline
 name: verdaccio
 steps:
 - name: build-master-push
-  pull: always
+  detach: true
   image: verdaccio/verdaccio:4
+  # volumes:
+  # - name: 
+  #   - "./storage:/verdaccio/storage"
+  #   - "./conf:/verdaccio/conf"
   when:
     event:
     - push
+
+
 
 trigger:
   branch:
