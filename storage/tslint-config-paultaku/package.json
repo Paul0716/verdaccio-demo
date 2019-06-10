@@ -1,0 +1,127 @@
+{
+	"name": "tslint-config-paultaku",
+	"versions": {
+		"0.1.0": {
+			"name": "tslint-config-paultaku",
+			"version": "0.1.0",
+			"description": "tslint configuration from paultaku",
+			"main": "tslint.js",
+			"scripts": {
+				"test": "echo \"Error: no test specified\" && exit 1"
+			},
+			"keywords": [
+				"tslint",
+				"config",
+				"standard",
+				"standardjs",
+				"typescript",
+				"ts"
+			],
+			"author": {
+				"name": "paultaku",
+				"email": "justlove0714@gmail.com"
+			},
+			"repository": {
+				"type": "git",
+				"url": ""
+			},
+			"license": "MIT",
+			"_id": "tslint-config-paultaku@0.1.0",
+			"_npmVersion": "6.4.1",
+			"_nodeVersion": "10.10.0",
+			"_npmUser": {
+				"name": "paultaku",
+				"email": "justlove0714@gmail.com"
+			},
+			"dist": {
+				"integrity": "sha512-Ay5oLZPYIW5r6mzsK4lorKicGnoeFt2etiNO2CK0dQ9zhpZbrxJrwLSLuEycTYLqRged2heZJzoWdiUsU5A0qg==",
+				"shasum": "c587aefd6c815190b7ac806889e626accd945f98",
+				"tarball": "https://registry.npmjs.org/tslint-config-paultaku/-/tslint-config-paultaku-0.1.0.tgz",
+				"fileCount": 3,
+				"unpackedSize": 1356,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcE0KKCRA9TVsSAnZWagAA1nAP+wQqeyWCX3wtc7xqQuso\nM9YXTKhO74Blns4Z+qhxDKN3IVzl95jaJnHVXMa03VGmxJ+soQeKquF0Nzy/\nyXYTtqKfOfPoHduqOq/J+h4uzobvk/MLmfljeTU71UCTrQsk+bN+gIQA6Fm6\n7FDetYM9nEGqZHPN0zCIzXB1jbndIuTYFD5C6byxFUyraxf5T0SOf7+jxRRB\ngt0ehPCX6rBpxQsRVIh7mmbz/iM8PbVr7jwv+Y9L1f7KcSsJhdyyQxRNCgdz\n7ZFTAABUZ4xEElehUa4Dz6YytGJjfies0W2TKvGx23OnLJrEfknGoOZaaodw\nSM+/nIvHMFtQBXGRYjevA8INEorfQ8HFhn1LOeIhbQyOsw59nPkYHhKO1MVb\neYz8lVMoxqP2wbVvo9oh0AbcxYkjvt6Jr2l3nTeZ93s2mjTueVqn9PZfmwvQ\nsTFpDTHGs2ourcMr7K3tO6019plOySuO6XUx31reS6EUTiv7GTJCrZgbRFLJ\n6MLfORbNheVV7QS/NwHNBZRdFVqWUko9t/FpurbGF697AgO1+6M81mpLKtay\nIZm8fuv0T2T3jh/7iDZ7W9cfkv8UzQTfA+A9h7NjYB8gsH7E8fQWL/bLFY0g\ntK0O1O07CJhvqp/ODfHMQIHOAh8Jiyx08E/0/Se9mLZIzCG16qzYNvsO0cP6\nKSia\r\n=iaEp\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"maintainers": [
+				{
+					"name": "paultaku",
+					"email": "justlove0714@gmail.com"
+				}
+			],
+			"directories": {},
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/tslint-config-paultaku_0.1.0_1544766089910_0.6527696559750982"
+			},
+			"_hasShrinkwrap": false
+		},
+		"0.3.2-rc": {
+			"name": "tslint-config-paultaku",
+			"version": "0.3.2-rc",
+			"description": "tslint configuration from paultaku",
+			"main": "tslint.js",
+			"scripts": {
+				"test": "echo \"Error: no test specified\" && exit 1"
+			},
+			"keywords": [
+				"tslint",
+				"config",
+				"standard",
+				"standardjs",
+				"typescript",
+				"ts"
+			],
+			"author": {
+				"name": "paultaku",
+				"email": "justlove0714@gmail.com"
+			},
+			"repository": {
+				"type": "git",
+				"url": ""
+			},
+			"license": "MIT",
+			"dependencies": {
+				"typescript": "^3.5.1"
+			},
+			"_id": "tslint-config-paultaku@0.3.2-rc",
+			"_nodeVersion": "10.15.3",
+			"_npmVersion": "6.9.0",
+			"dist": {
+				"integrity": "sha512-utTj7ABneFDrXqEe1QIHYdOEyyY1B0ZdETjFVGtSfYNQVIyNA4mFTMeZ/heqOqstPS7XiLZIqkEBrMYKFOi26Q==",
+				"shasum": "2ba8a4fcc27dbe25415d602b04c74585c3b16b17",
+				"tarball": "http://localhost:4873/tslint-config-paultaku/-/tslint-config-paultaku-0.3.2-rc.tgz"
+			}
+		}
+	},
+	"time": {
+		"created": "2018-12-14T05:41:29.910Z",
+		"0.1.0": "2018-12-14T05:41:30.058Z",
+		"modified": "2019-06-07T11:18:11.611Z",
+		"0.3.2-rc": "2019-06-07T11:18:11.611Z"
+	},
+	"users": {},
+	"dist-tags": {
+		"latest": "0.3.2-rc"
+	},
+	"_uplinks": {
+		"npmjs": {
+			"etag": "W/\"993b154efae9440d3e7ba703dfdea57b\"",
+			"fetched": 1559906291575
+		}
+	},
+	"_distfiles": {
+		"tslint-config-paultaku-0.1.0.tgz": {
+			"url": "https://registry.npmjs.org/tslint-config-paultaku/-/tslint-config-paultaku-0.1.0.tgz",
+			"sha": "c587aefd6c815190b7ac806889e626accd945f98",
+			"registry": "npmjs"
+		}
+	},
+	"_attachments": {
+		"tslint-config-paultaku-0.3.2-rc.tgz": {
+			"shasum": "2ba8a4fcc27dbe25415d602b04c74585c3b16b17",
+			"version": "0.3.2-rc"
+		}
+	},
+	"_rev": "4-7d38d4a8685cc572",
+	"_id": "tslint-config-paultaku",
+	"readme": "ERROR: No README data found!"
+}
