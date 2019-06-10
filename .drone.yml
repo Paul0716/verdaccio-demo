@@ -1,19 +1,25 @@
+clone:
+  git:
+    image: plugins/git
+    pull: true
 kind: pipeline
 name: verdaccio
 steps:
-- name: build-master-push
-  detach: true
-  image: verdaccio/verdaccio:4
-  volumes:
-  - name: 
-    - "./storage:/verdaccio/storage"
-    - "./conf:/verdaccio/conf"
+- name: build
+  image: docker/compose
+  commands:
+    - docker compose up -d
+  volume:
+    - /var/run/docker.sock:/var/run/docker.sock
   when:
     event:
     - push
 
-
+# - name: deploy
+#   detach: true
+#   image: verdaccio/verdaccio:4
+  
 
 trigger:
   branch:
-  - master
+  - develop
