@@ -4,8 +4,6 @@ steps:
 - name: build-master-push
   pull: always
   image: verdaccio/verdaccio:4
-  commands:
-    - "/usr/bin/docker-compose docker-compose up -d"
   when:
     event:
     - push
