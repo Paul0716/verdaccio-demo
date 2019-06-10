@@ -4,7 +4,10 @@ clone:
     pull: true
 pipeline:
   build:
-    image: docker/docker
+    image: plugins/docker
+    repo: docker/docker
+    username: paultakku
+    password: love0738
     pull: true
     commands:
       - docker-compose up -d
