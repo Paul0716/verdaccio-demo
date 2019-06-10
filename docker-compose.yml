@@ -17,4 +17,4 @@ volumes:
   verdaccio:
     driver: local
   nginx:
-    drivr: local
+    driver: local
