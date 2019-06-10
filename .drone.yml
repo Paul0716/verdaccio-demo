@@ -1,0 +1,15 @@
+kind: pipeline
+name: verdaccio
+steps:
+- name: build-master-push
+  pull: always
+  image: verdaccio/verdaccio:4
+  commands:
+    - "docker-compose up -d"
+  when:
+    event:
+    - push
+
+trigger:
+  branch:
+  - master
