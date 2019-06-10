@@ -5,7 +5,7 @@ clone:
 pipeline:
   build:
     image: plugins/docker
-    repo: docker/docker
+    repo: tmaier/docker-compose
     username: paultakku
     password: love0738
     pull: true
