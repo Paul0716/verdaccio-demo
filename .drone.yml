@@ -3,23 +3,16 @@ clone:
     image: plugins/git
     pull: true
 pipeline:
-  build:
-    image: tmaier/docker-compose
-    username: paultakku
-    password: love0738
-    pull: true
-    commands:
-      - docker-compose up -d
-    volume:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      event:
+  deploy:
+    image: verdaccio/verdaccio:4
+    detach: true
+  volume:
+    - "./storage:/verdaccio/storage"
+    - "./conf:/verdaccio/conf"
+  when:
+    event:
       - push
-  
 
-# - name: deploy
-#   detach: true
-#   image: verdaccio/verdaccio:4
   
 
 trigger:
