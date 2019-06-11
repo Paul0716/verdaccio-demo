@@ -5,10 +5,9 @@ steps:
 - name: verdaccio
   image: verdaccio/verdaccio:4
   detach: true
-- name: deploy
-  image: plugin/docker
   command:
   - docker run -it -d -v ${PWD}/storage:/verdaccio/storage -v ${PWD}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+  
 
 
 trigger:
