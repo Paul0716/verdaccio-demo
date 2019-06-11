@@ -1,35 +1,19 @@
-# clone:
-#   git:
-#     image: plugins/git
-#     pull: true
-# pipeline:
-#   build:
-#     name: verdaccio
-#     image: verdaccio/verdaccio:4
-#     detach: true
-#     pull: true
-#     volumes: [
-#       "/var/local/verdaccio/storage:/verdaccio/storage",
-#       "/var/local/verdaccio/conf:/verdaccio/conf"
-#     ]
-#     when:
-#       event:
-#       - push
-
-
-# trigger:
-#   branch:
-#   - develop
 kind: pipeline
 name: default
 
 steps:
-- name: deploy
+- name: verdaccio
   image: verdaccio/verdaccio:4
   detach: true
   pull: always
-  when:
-    event:
-    - push
-    branch:
-    - develop
+- name: deploy
+  image: plugins/docker
+  command:
+  - docker run -it -d -v ${PWD}/storage:/verdaccio/storage -v ${PWD}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+
+
+trigger:
+  event:
+  - push
+  branch:
+  - develop
