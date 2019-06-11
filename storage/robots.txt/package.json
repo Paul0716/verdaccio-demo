@@ -216,7 +216,7 @@
 	"_uplinks": {
 		"npmjs": {
 			"etag": "W/\"508e5d2e7d08ba4c79ed78499a01fd3c\"",
-			"fetched": 1560183955729
+			"fetched": 1560266529800
 		}
 	},
 	"_distfiles": {
@@ -247,7 +247,7 @@
 		}
 	},
 	"_attachments": {},
-	"_rev": "1-67439e22cefa5791",
+	"_rev": "2-a6f4e206d523cb3b",
 	"_id": "robots.txt",
 	"readme": "## Robots.txt\n\nPass in the location of your `robots.txt` file on the file system, and this module\nwill return you a piece of Connect/Express middleware that will serve it at `GET /robots.txt`.\n\nThis makes one *synchronous* call to read the file upon start up, then reads it from memory\nfor every request. If you gave the wrong path, you will know about it at startup. Cache headers\nare set for you.\n\n## Installation\n\n    npm install --save robots.txt\n\n## Usage\n\n    var robots = require('robots.txt')\n\n    // Pass in the absolute path to your robots.txt file\n    app.use(robots(__dirname + '/robots.txt'))\n\n## Credits\nBuilt by [Tom Gallacher](http://twitter.com/tomgco) and [Ben Gourley](https://github.com/bengourley)\n\n## Licence\nLicensed under the [New BSD License](http://opensource.org/licenses/bsd-license.php)"
 }

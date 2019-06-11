@@ -4,3 +4,5 @@
 
 This is as demo setup project for verdaccio host on linode
 
+##### local run command 
+`docker run -it -v ${PWD}/storage:/verdaccio/storage -v ${PWD}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4`
