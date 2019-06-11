@@ -4,12 +4,10 @@ name: default
 steps:
 - name: verdaccio
   image: verdaccio/verdaccio:4
-  detach: true
-  pull: always
-- name: deploy
-  image: plugins/docker
-  command:
-  - docker run -it -d -v ${PWD}/storage:/verdaccio/storage -v ${PWD}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+# - name: deploy
+#   image: nginx
+  # command:
+  # - docker run -it -d -v ${PWD}/storage:/verdaccio/storage -v ${PWD}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
 
 
 trigger:
