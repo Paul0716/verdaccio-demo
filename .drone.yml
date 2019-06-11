@@ -12,9 +12,6 @@ pipeline:
   when:
     event:
       - push
-
-  
-
 trigger:
   branch:
   - develop
