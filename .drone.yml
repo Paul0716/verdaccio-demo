@@ -1,22 +1,36 @@
-clone:
-  git:
-    image: plugins/git
-    pull: true
-pipeline:
-  build:
-    name: verdaccio
-    image: verdaccio/verdaccio:4
-    detach: true
-    pull: true
-    volumes: [
-      "/var/local/verdaccio/storage:/verdaccio/storage",
-      "/var/local/verdaccio/conf:/verdaccio/conf"
-    ]
-    when:
-      event:
-      - push
+# clone:
+#   git:
+#     image: plugins/git
+#     pull: true
+# pipeline:
+#   build:
+#     name: verdaccio
+#     image: verdaccio/verdaccio:4
+#     detach: true
+#     pull: true
+#     volumes: [
+#       "/var/local/verdaccio/storage:/verdaccio/storage",
+#       "/var/local/verdaccio/conf:/verdaccio/conf"
+#     ]
+#     when:
+#       event:
+#       - push
 
 
-trigger:
-  branch:
-  - develop
+# trigger:
+#   branch:
+#   - develop
+kind: pipeline
+name: default
+
+steps:
+- name: deploy
+  image: verdaccio/verdaccio:4
+  privileged: true
+  detach: true
+  pull: always
+  when:
+    event:
+    - push
+    branch:
+    - develop
