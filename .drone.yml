@@ -12,7 +12,8 @@ steps:
     path: /verdaccio/storage
 
   command:
-    - ls /verdaccio
+    - pwd
+    - ls ${pwd}
   
 volumes:
 - name: conf
