@@ -12,7 +12,6 @@ steps:
     path: /var/local/storage
 
   command:
-    - 
     - docker run -it -d -v /var/local/storage:/verdaccio/storage -v /var/local/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
 volumes:
