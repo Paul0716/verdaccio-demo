@@ -2,14 +2,16 @@ kind: pipeline
 name: default
 
 steps:
-- name: verdaccio
-  image: verdaccio/verdaccio:4
+- name: deploy
+  image: plugin/docker
   detach: true
   volumes:
-  - name: conf
-    path: /conf
-  - name: storage
-    path: /storage
+    - name: conf
+      path: /conf
+    - name: storage
+      path: /storage
+  command:
+    - docker run -it -v /storage:/verdaccio/storage -v /conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
 volumes:
 - name: conf
