@@ -5,28 +5,28 @@ steps:
 - name: verdaccio
   image: verdaccio/verdaccio:4
   detach: true
-  volumes:
-  - name: cache
-    path: /tmp/cache
-  - name: conf
-    path: ${pwd}/conf
-  - name: storage
-    path: ${pwd}/storage
+  # volumes:
+  # - name: cache
+  #   path: /tmp/cache
+  # - name: conf
+  #   path: ${pwd}/conf
+  # - name: storage
+  #   path: ${pwd}/storage
 
   command:
     - whoami
   # - docker run -it -d -v /var/local/verdaccio/storage:/verdaccio/storage -v /var/local/verdaccio/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
-volumes:
-- name: cache
-  host:
-    path: /var/lib/cache
-- name: conf
-  host: 
-    path: /var/local/verdaccio/conf
-- name: storage
-  host: 
-    path: /var/local/verdaccio/storage
+# volumes:
+# - name: cache
+#   host:
+#     path: /var/lib/cache
+# - name: conf
+#   host: 
+#     path: /var/local/verdaccio/conf
+# - name: storage
+#   host: 
+#     path: /var/local/verdaccio/storage
 
 
 
