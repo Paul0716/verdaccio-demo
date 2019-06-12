@@ -6,13 +6,28 @@ steps:
   image: verdaccio/verdaccio:4
   detach: true
   volumes:
-    - /var/local/verdaccio/storage:${pwd}/storage
-    - /var/local/verdaccio/conf:${pwd}/conf
+  - name: cache
+    path: /tmp/cache
+  - name: conf
+    path: ${pwd}/conf
+  - name: storage
+    path: ${pwd}/storage
+
   command:
     - ls ${pwd}
   # - docker run -it -d -v /var/local/verdaccio/storage:/verdaccio/storage -v /var/local/verdaccio/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
-  
+volumes:
+- name: cache
+  host:
+    path: /var/lib/cache
+- name: conf
+  host: 
+    path: /var/local/verdaccio/conf
+- name: storage
+  host: 
+    path: /var/local/verdaccio/storage
+
 
 
 trigger:
