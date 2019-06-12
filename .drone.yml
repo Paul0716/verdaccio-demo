@@ -7,14 +7,12 @@ steps:
   detach: true
   volumes:
   - name: conf
-    path: /var/local/conf
+    path: /verdaccio/conf
   - name: storage
-    path: /var/local/storage
+    path: /verdaccio/storage
 
   command:
-    - ls /var/local
-    - ls /var/local/verdaccio
-    - docker run -it -d -v /var/local/storage:/verdaccio/storage -v /var/local/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+    - ls /verdaccio
   
 volumes:
 - name: conf
