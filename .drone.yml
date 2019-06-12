@@ -12,7 +12,6 @@ steps:
     path: ${pwd}/storage
 
   command:
-    - pwd
     - ls ${pwd}
     - docker run -it -v ${pwd}/storage:/verdaccio/storage -v ${pwd}/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
