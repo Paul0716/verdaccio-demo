@@ -6,7 +6,7 @@ steps:
   image: verdaccio/verdaccio:4
   detach: true
   command:
-  - ls / -al
+  - ls ${PWD}
   
 
 
