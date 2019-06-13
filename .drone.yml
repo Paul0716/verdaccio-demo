@@ -3,14 +3,16 @@ name: default
 
 steps:
 - name: deploy
-  detach: true
+  image: verdaccio/verdaccio:4
   volumes:
+    - name: cache
+      path: /tmp/cache
     - name: conf
       path: /conf
     - name: storage
       path: /storage
-  command:
-    - docker run -it -v /storage:/verdaccio/storage -v /conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+  # command:
+    # - docker run -it -d -v /storage:/verdaccio/storage -v /conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
 volumes:
 - name: conf
@@ -19,7 +21,8 @@ volumes:
 - name: storage
   host: 
     path: /var/local/verdaccio/storage  
-
+- name: cache
+  temp: {}
 
 
 trigger:
