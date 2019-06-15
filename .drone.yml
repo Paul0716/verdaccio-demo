@@ -7,7 +7,7 @@ steps:
 #   detach: true
   
 - name: deploy
-  image: docker/compose
+  image: docker/compose:1.19.0
   volumes:
     - name: cache
       path: /tmp/cache
