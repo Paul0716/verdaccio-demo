@@ -8,6 +8,3 @@ services:
     volumes:
       - "./storage:/verdaccio/storage"
       - "./conf:/verdaccio/conf"
-volumes:
-  nginx:
-    driver: local
