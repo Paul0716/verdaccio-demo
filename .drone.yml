@@ -12,9 +12,9 @@ steps:
     - name: cache
       path: /tmp/cache
     - name: conf
-      path: ./conf
+      path: /conf
     - name: storage
-      path: ./storage
+      path: /storage
   command:
     - docker-compose -p verdaccio down
     - docker-compose -p verdaccio up -d
