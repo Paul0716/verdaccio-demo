@@ -13,7 +13,7 @@ steps:
       path: /storage
   command:
     # - docker-compose -p verdaccio down
-    - up -d
+    - up --help
   
 volumes:
 - name: conf
