@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: deploy
-  image: verdaccio/verdaccio:4
+  image: docker:17.12.1-ce
   volumes:
     - name: docker
       path: /var/run/docker.sock
