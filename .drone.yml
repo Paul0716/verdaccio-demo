@@ -2,10 +2,6 @@ kind: pipeline
 name: default
 
 steps:
-# - name: setup
-#   image: verdaccio/verdaccio:4
-#   detach: true
-  
 - name: deploy
   image: docker/compose:1.19.0
   volumes:
@@ -16,7 +12,7 @@ steps:
     - name: storage
       path: /storage
   command:
-    - docker-compose -p verdaccio down
+    # - docker-compose -p verdaccio down
     - docker-compose -p verdaccio up -d
   
 volumes:
