@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: deploy
-  image: docker:17.12.1-ce
+  image: docker/compose:1.19.0
   volumes:
     - name: docker
       path: /var/run/docker.sock
@@ -14,7 +14,7 @@ steps:
     - name: storage
       path: /storage
   command:
-    - ls /bin
+    - up
     # - docker run -it -d -v /storage:/verdaccio/storage -v /conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
 volumes:
