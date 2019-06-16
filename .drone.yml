@@ -4,7 +4,6 @@ name: default
 steps:
 - name: deploy
   image: docker/compose:1.19.0
-  detach: true
   volumes:
     - name: docker
       path: /var/run/docker.sock
