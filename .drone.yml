@@ -3,9 +3,10 @@ name: default
 
 steps:
 - name: deploy
-  image: verdaccio
+  image: verdaccio/verdaccio:4
   volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+    - name: docker
+      path: /var/run/docker.sock
     - name: cache
       path: /tmp/cache
     - name: conf
@@ -20,6 +21,9 @@ steps:
     # - up --help
   
 volumes:
+- name: docker
+  host:
+    path: /var/run/docker.sock
 - name: conf
   host: 
     path: /var/local/verdaccio/conf
