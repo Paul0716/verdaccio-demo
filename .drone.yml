@@ -12,8 +12,8 @@ steps:
     - name: storage
       path: /storage
   command:
-    # - docker-compose -p verdaccio down
-    - up --help
+    - docker-compose --help
+    # - up --help
   
 volumes:
 - name: conf
