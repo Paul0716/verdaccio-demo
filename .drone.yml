@@ -12,7 +12,10 @@ steps:
     - name: storage
       path: /storage
   command:
-    - docker-compose up
+    - run -it -d -v /var/local/verdaccio/storage:/verdaccio/storage -v /var/local/verdaccio/conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
+
+  
+
     # - up --help
   
 volumes:
