@@ -6,5 +6,5 @@ services:
     ports:
       - "4873:4873"
     volumes:
-      - "/storage:/verdaccio/storage"
-      - "/conf:/verdaccio/conf"
+      - "/var/local/verdaccio/storage:/verdaccio/storage"
+      - "/var/local/verdaccio/conf:/verdaccio/conf"
