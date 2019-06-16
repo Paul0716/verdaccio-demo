@@ -14,7 +14,7 @@ steps:
     - name: storage
       path: /storage
   command:
-    - docker run
+    - ls /bin
     # - docker run -it -d -v /storage:/verdaccio/storage -v /conf:/verdaccio/conf --name verdaccio -p 4873:4873 --rm verdaccio/verdaccio:4
   
 volumes:
