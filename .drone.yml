@@ -12,7 +12,7 @@ steps:
     - name: storage
       path: /storage
   command:
-    - docker-compose --help
+    - docker-compose up
     # - up --help
   
 volumes:
